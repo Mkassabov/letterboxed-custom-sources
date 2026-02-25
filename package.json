@@ -1,0 +1,10 @@
+{
+  "name": "letterboxed-custom-sources",
+  "version": "0.2.0",
+  "description": "Chrome extension to add custom streaming sources to Letterboxd film pages",
+  "private": true,
+  "scripts": {
+    "build": "bun run scripts/build.js",
+    "dev": "bun run scripts/build.js --watch"
+  }
+}

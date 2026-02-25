@@ -1,0 +1,14 @@
+/*
+ * Styles for injected service items.
+ *
+ * Items inherit almost all styling from Letterboxd's own .service rules.
+ * We only need minimal overrides / safety nets here.
+ */
+
+/* Ensure injected icons render at the same size as native service icons */
+[data-lbp-source] .brand svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
