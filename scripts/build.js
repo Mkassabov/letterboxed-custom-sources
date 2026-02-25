@@ -6,15 +6,17 @@
  * that you can load as an unpacked extension in Chrome.
  *
  * Usage:
- *   bun run build          — one-off build
- *   bun run dev             — watch mode (rebuild on changes)
+ *   npm run build          — one-off build
+ *   npm run dev            — watch mode (rebuild on changes)
  */
 
 import { watch } from "fs";
 import { cp, mkdir, rm } from "fs/promises";
-import { join } from "path";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
 
-const ROOT = join(import.meta.dir, "..");
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
 const DIST = join(ROOT, "dist");
 
 const COPY_TARGETS = [
